@@ -1,7 +1,7 @@
 #include <iostream>
 #define N 10
 int c[15];
-int length;
+int length = 10;
 using namespace std;
 
 void countSort(int *A, int *B, int k)
@@ -10,7 +10,6 @@ void countSort(int *A, int *B, int k)
         c[i] = 0;
     }
     //数组传参求长度
-    cout  << length << endl;
     for (int j = 0; j < length; ++j) {
         ++c[A[j]];
     }
@@ -27,8 +26,6 @@ int main(void)
 {
     int a[N] = {1, 3, 0, 7, 11, 2, 0, 7, 6, 8};
     int b[N];
-    length = 10; //主函数内给全局变量赋值
-    //cout  << length << endl;
     countSort(a, b, 15);
     for (int i = 0; i < 10; ++i) {
         cout << b[i] << endl;
