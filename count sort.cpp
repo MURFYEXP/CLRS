@@ -1,15 +1,16 @@
 #include <iostream>
 #define N 10
-int c[15];
+int c[16];
 int length = 10;
 using namespace std;
 
 void countSort(int *A, int *B, int k)
 {
-    for (int i = 0; i <= k; ++i) {
+    //数组越界c[15],导致for语句之后出现异常
+    for (int i = 0; i < k; ++i) {
         c[i] = 0;
     }
-    //数组传参求长度
+    
     for (int j = 0; j < length; ++j) {
         ++c[A[j]];
     }
