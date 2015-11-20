@@ -18,7 +18,7 @@ list *listSearch(list *l, int k)
 {
     //nil->next为头结点
     list *x = nil->next;
-    while (x != nullptr && k != x->key){
+    while (x != nil && k != x->key){
         x = x->next;
     }
     return x;
